@@ -1,0 +1,20 @@
+{
+  "name": "indicator-scraper",
+  "collaborators": [
+    "Kuba Clark <jakub.clark@protonmail.com>"
+  ],
+  "description": "Web App which scrapes texts for FQDNs, MD5s, IPv4s and more",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakubclark/indicator-scraper"
+  },
+  "files": [
+    "package_bg.wasm",
+    "package.js",
+    "package.d.ts"
+  ],
+  "module": "package.js",
+  "types": "package.d.ts",
+  "sideEffects": "false"
+}
