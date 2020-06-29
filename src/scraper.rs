@@ -8,7 +8,8 @@ lazy_static! {
         r"\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b"
     )
     .unwrap();
-    static ref FQDN_RE: Regex = Regex::new(r"([a-zA-Z0-9-]{0,62}[a-zA-Z0-9]\.)+[a-zA-Z]{2,63}").unwrap();
+    static ref FQDN_RE: Regex =
+        Regex::new(r"([a-zA-Z0-9-]{0,62}[a-zA-Z0-9]\.)+[a-zA-Z]{2,63}").unwrap();
     static ref MD5_RE: Regex = Regex::new(r"\b[a-fA-F0-9]{32}\b").unwrap();
     static ref SHA256_RE: Regex = Regex::new(r"\b[a-fA-F0-9]{64}\b").unwrap();
 }

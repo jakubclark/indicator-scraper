@@ -1,0 +1,46 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #093875;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+#scrape-text-area {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30rem;
+    width: 60%;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scrape-text-div {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+section #scrape-app {
+    text-align: center;
+}
