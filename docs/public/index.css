@@ -3,8 +3,7 @@ table {
     width: 100%;
 }
 
-th,
-td {
+th, td {
     text-align: left;
     padding: 8px;
 }
@@ -27,7 +26,18 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     height: 30rem;
-    width: 60%;
+    width: 100%;
+    resize: none;
+}
+
+#scrape-area {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#scrape-result-tables {
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 button {

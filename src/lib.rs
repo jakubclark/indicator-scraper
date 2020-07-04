@@ -38,20 +38,24 @@ fn view_header() -> Node<Msg> {
 // }
 
 fn view_scrape_area() -> Node<Msg> {
-    div![
-        C!["form-group"],
-        id!("scrape-text-div"),
-        textarea![
-            C!["form-control"],
-            id!("scrape-text-area"),
-            input_ev(Ev::Input, Msg::ScrapeRequest),
-        ]
+    form![
+        C!["pure-form"],
+        id!["scrape-area"],
+        fieldset!(
+            C!["pure-group"],
+            textarea![
+                // C!["pure-input-1-2"],
+                id!("scrape-text-area"),
+                input_ev(Ev::Input, Msg::ScrapeRequest),
+            ]
+        )
     ]
 }
 
 fn view_scrape_results(indicators: &IndicatorResults) -> Node<Msg> {
-    section![
+    div![
         C!["scrape-results"],
+        id!("scrape-result-tables"),
         indicators.iter().map(|(k, values)| {
             IF!(!values.is_empty() => vec![
                 h3![format!["{} Scrape Results", k]],
@@ -80,10 +84,15 @@ fn view_scrape_results(indicators: &IndicatorResults) -> Node<Msg> {
 fn view(model: &Model) -> Vec<Node<Msg>> {
     vec![
         view_header(),
-        view_scrape_area(),
+        // div![
+        //     id!["scrape-main-div"],
+            view_scrape_area(),
+            view_scrape_results(&model.indicators)
+        // ]
+        // view_scrape_area(),
         // br!(),
         // view_scrape_button(),
-        view_scrape_results(&model.indicators),
+        // view_scrape_results(&model.indicators),
     ]
 }
 
